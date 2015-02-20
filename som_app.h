@@ -40,13 +40,15 @@ private:
     int nmax;
     double alpha;
     double amin;
+    double change_radius;
 
     som* net;
 
     void draw_nets(QVector < QPair<int,int> > v,int grid_size);
     int generate_index_of_dot();
     double a(int n);
-    double eta (int n, int ibmu, int jbmu,i,j);
+    double eta (int n, int ibmu, int jbmu,int i,int j);
+    bool is_in_radius(QPair<int,int> fire_dot, QPair<int,int> fired_dot);
     void start_algo();
     void redraw();
 };
